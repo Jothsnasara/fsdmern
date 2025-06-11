@@ -1,53 +1,55 @@
+
 import { Button, TextField } from '@mui/material'
-import React, { useState } from 'react'
+import React, { useState ,useEffect} from 'react'
 
-{/*const Name = () => {
-  
- var[name,setName]=useState("JOTHSNA")
- var[a,seta]=useState()
-  
-  
-
-  const inputHandler=(e)=>{
-  console.log(e.target.value)
-   setName(e.target.value)}
-   const addhandler=()=>{
-    seta(name)
-   }*/}
-   const Name =() => {
-       var[count,setCount]=useState(0)
-       
-       const add=()=>{
-       setCount(count+1)
+const Name = () => {
+  var[name,setName]=useState("jothsna")
+  var[a,seta]=useState()
+  var[count,setCount]=useState(0)
+  var[b,setb]=useState()
+  const re=()=>{
+          setb('react')
       }
-      const sub=()=>{
-       setCount(count-1)
+      const fu=()=>{
+          setb('full')
       }
- {/*const Name =() =>{
-    var[name,setName]=useState()
-    const inputHandler=(e)=>{
-  console.log(e.target.value)
-   setName(e.target.value)}
-   const addhandler=()=>{
+      const st=()=>{
+          setb('stack')
+      }
+  const inputHandler=(c)=>{
+    console.log(c.target.value)
+    setName(c.target.value)
+  }
+  const outputHandler=()=>{
     seta(name)
-  }*/}
+  }
+  const add=()=>{
+    setCount(count+1)
+  }
+  const sub=()=>{
+    setCount(count-1)
+  }
+  useEffect(()=>{
+    re()
+  },[])
   return (
     <div>
-      {/* <h4>Welcome {a}</h4>
-        <TextField label=" Enter Name" variant="filled" onChange={inputHandler} /><br/>
-        <Button  variant="contained" onClick={addhandler}>add</Button>*/}
-          <h5>Count: {count}</h5>
-                <Button  variant="contained" color="success" onClick={add}>+</Button>
-                <Button  variant="contained" color="error" onClick={sub}>-</Button>
-                
-        
-        {/*<Button  variant="contained" onClick={addhandler}>react</Button>
-        <Button  variant="contained" onClick={addhandler}>full</Button>
-        <Button  variant="contained" onClick={addhandler}>stack</Button>*/}
-
+        {/* <h1>welcome {na}</h1> */}
+        {/*<h2>count: {go}</h2>*/}
+        {/* <TextField variant='outlined' label='enter name' onChange={inputHandler}/><br /> */}
+        <h1>welcome to {b}</h1>
+        <Button variant="contained" color="secondary" onClick={re}>react</Button>
+        <Button variant="contained" color="secondary" onClick={fu}>full</Button>
+        <Button variant="contained" color="secondary" onClick={st}>stack</Button>
+        {/*<Button variant="contained" color="secondary" onClick={outputHandler}>Add</Button>
+        <Button variant="contained" color="secondary" onClick={counterr}>+</Button>
+        <Button variant="contained" color="secondary" onClick={counter}>-</Button>*/}
     </div>
   )
 }
 
-
 export default Name
+
+
+
+
